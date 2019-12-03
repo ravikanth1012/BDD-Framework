@@ -45,46 +45,12 @@ import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
-class login {
-	
-//	@Given("User navigate to login page")
+
+class login1 {
+	@Given("User navigate to login page")
 	def navigatetologinpage()
 	{
-		println("started")
-		WebUI.openBrowser('')
-		WebUI.navigateToUrl('https://opensource-demo.orangehrmlive.com/')
-		
-	}
-	@When("User enters (.*) and (.*)")
-	def entercredintails(String username, String password)
-	{
-		println("credintails")
-		println("username:"+username)
-		println("password:"+password)
-		
-		WebUI.click(findTestObject('Object Repository/Page_OrangeHRM/span_Username'))
-		
-		WebUI.setText(findTestObject('Object Repository/Page_OrangeHRM/input_LOGIN Panel_txtUsername'), username)
-		
-		WebUI.setEncryptedText(findTestObject('Object Repository/Page_OrangeHRM/input_Username_txtPassword'), password)
-		
-	}
-	
-	@And("click on login button")
-	def clickloginbutton()
-	{
-		println("loginbutton")
-		WebUI.click(findTestObject('Object Repository/Page_OrangeHRM/input_Password_Submit'))
-	}
-	
-	@Then("user navigate to the home page")
-	def verifyhomepage()
-	{
-		println("verifications")
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Page_OrangeHRM/b_Dashboard'), 5)
-		
-		WebUI.closeBrowser()
+		println("started on")
 		
 	}
 }
-	
